@@ -15,33 +15,46 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
 }
 
 .navbar-links {
   list-style: none;
-  display: inline-flex;
+  /* use flexbox so items align vertically and never wrap */
+  display: flex;
   gap: 30px; /* Space between the items */
+  align-items: center;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-links li {
-  display: inline;
+  display: inline-block;
 }
 
 .navbar-links a {
   color: white;
   text-decoration: none;
-  font-size: 0.7em;
-  font-family: Outfit;
+  /* use a consistent absolute size to avoid inheriting small/large sizes per page */
+  font-size: 0.8rem;
+  font-family: Outfit, sans-serif;
+  line-height: 1;
+  padding: 6px 4px; /* small vertical padding to ensure comfortable click area */
+  display: inline-block;
 }
 
 .navbar-links a:hover {
   color: #aac1e6;
 }
 
-.outfit-<uniquifier> {
+.outfit {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: normal;
   font-style: normal;
 }
 
