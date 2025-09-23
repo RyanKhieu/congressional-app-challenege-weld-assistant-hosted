@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weld Assist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="angles.html">Angles</a></li>
+            <li><a href="sides.html">Sides</a></li>
+            <li><a href="math.html">Reference</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <form id="contact-form" action="mail.php" method="POST"> <!--change eventually-->
+  <h2>Contact us</h2>
+
+  <!-- Name input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+      <label class="form-label" for="name">Name</label>
+      <input type="text" id="name" name="name" class="form-control" />
+  </div>
+
+  <!-- Email input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+      <label class="form-label" for="email">Email address</label>
+      <input type="email" id="email" name="email" class="form-control" />
+  </div>
+
+  <!-- Subject input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+      <label class="form-label" for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" class="form-control" />
+  </div>
+
+  <!-- Message input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+      <label class="form-label" for="message">Message</label>
+      <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+  </div>
+
+  <!-- Submit button TEMPORARY SOLUTION, SHOULD TAKE INPUT--> 
+  <button data-mdb-button-init id="submit-form" type="button" data-mdb-ripple-init class="btn btn-primary btn-block mb-4" onclick="window.location.href='index.html'">
+  Send
+  </button>
+</form>
+</body>
+</html>

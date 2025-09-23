@@ -1,0 +1,123 @@
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the navbar */
+.navbar {
+  background-color: #000000;
+  padding: 10px 0;
+  text-align: center;
+  
+  /* make sticky */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-links {
+  list-style: none;
+  display: inline-flex;
+  gap: 30px; /* Space between the items */
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.7em;
+  font-family: Outfit;
+}
+
+.navbar-links a:hover {
+  color: #aac1e6;
+}
+
+.outfit-<uniquifier> {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+/* form */
+#contact-form {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 15px;
+  background: #f9f9f9; 
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+#contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Input & textarea */
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.form-control:focus {
+  border-color: #aac1e6; /* match navbar hover color */
+  box-shadow: 0 0 0 3px rgba(170, 193, 230, 0.35);
+  outline: none;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+/* Submit button */
+#submit-form {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: #000; 
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#submit-form:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+#submit-form:active {
+  transform: translateY(0);
+}
