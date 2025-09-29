@@ -20,12 +20,17 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    
-    <h1>Pythagorean Theorem</h1>
-    Side A: <input type="number" name="a" id="a">
-    <br>
-    Side B: <input type="number" name="a" id="b">
-    <button onclick="pythag()">Calculate</button>
+    <div>
+        <div>
+            <h1>Pythagorean Theorem</h1>
+        </div>
+        <div>
+            Side A: <input type="number" name="a" id="a">
+            <br>
+            Side B: <input type="number" name="a" id="b">
+            <br>
+            <button class="pythagbutton" onclick="pythag()">Calculate</button>
+        </div>
     <script>
         function pythag() {
             var a = document.getElementById('a').value;

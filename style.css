@@ -110,6 +110,20 @@ textarea.form-control {
   resize: none;
 }
 
+button {
+  border: none;
+  background-color: #cf3b33;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  font-family: "Outfit", sans-serif;
+}
+
+.pythagbutton {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
 /* Submit button */
 #submit-form {
   display: block;
@@ -134,3 +148,4 @@ textarea.form-control {
 #submit-form:active {
   transform: translateY(0);
 }
+
