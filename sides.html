@@ -25,9 +25,9 @@
             <h1>Pythagorean Theorem</h1>
         </div>
         <div>
-            Side A: <input type="number" name="a" id="a">
+            Side A: <input type="number" required name="a" id="a" min="0" value="0" step="0.01">
             <br>
-            Side B: <input type="number" name="a" id="b">
+            Side B: <input type="number" required name="b" id="b" min="0" value="0" step="0.01">
             <br>
             <button class="pythagbutton" onclick="pythag()">Calculate</button>
         </div>
@@ -35,7 +35,7 @@
         function pythag() {
             var a = document.getElementById('a').value;
             var b = document.getElementById('b').value;
-            var c = Math.sqrt(Math.pow(parseInt(a), 2) + Math.pow(parseInt(b), 2));
+            var c = Math.round(((Math.sqrt(Math.pow(parseFloat(a), 2) + Math.pow(parseFloat(b), 2))) + Number.EPSILON) * 100) / 100;
             alert(c);
         }
     </script>
