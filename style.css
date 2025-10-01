@@ -51,6 +51,28 @@
   color: #aac1e6;
 }
 
+@media (max-width: 370px) {
+  .navbar-links {
+    gap: 15px; /* Reduce gap from 30px to 15px */
+  }
+  
+  .navbar-links a {
+    font-size: 0.7rem; /* Smaller font size */
+    padding: 6px 2px; /* Reduce horizontal padding */
+  }
+}
+
+@media (max-width: 270px) {
+  .navbar-links {
+    gap: 8px; /* Even smaller gap */
+  }
+  
+  .navbar-links a {
+    font-size: 0.6rem; /* Even smaller font */
+    padding: 6px 1px;
+  }
+}
+
 .outfit {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -113,6 +135,7 @@ textarea.form-control {
 .explanation {
   margin-left: 20px;
   margin-top: 20px;
+  margin-right: 20px;
   font-family: "Outfit", sans-serif;
 }
 
@@ -173,6 +196,11 @@ input[type='number'],
 select:focus,
 textarea:focus {
   font-size: 16px;
+}
+
+.result {
+  margin-top: 20px;
+  font-family: "Outfit", sans-serif;
 }
 
 /* Submit button */
