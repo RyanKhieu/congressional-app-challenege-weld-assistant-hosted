@@ -1,17 +1,22 @@
-/* Reset some default styling */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Style for the navbar */
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
 .navbar {
-  background-color: #000000;
+  background-color: #000;
   padding: 10px 0;
   text-align: center;
-  
-  /* make sticky */
   position: sticky;
   top: 0;
   z-index: 999;
@@ -23,13 +28,10 @@
 
 .navbar-links {
   list-style: none;
-  /* use flexbox so items align vertically and never wrap */
   display: flex;
-  gap: 30px; /* Space between the items */
+  gap: 30px;
   align-items: center;
   white-space: nowrap;
-  margin: 0;
-  padding: 0;
 }
 
 .navbar-links li {
@@ -39,11 +41,9 @@
 .navbar-links a {
   color: white;
   text-decoration: none;
-  /* use a consistent absolute size to avoid inheriting small/large sizes per page */
   font-size: 0.8rem;
-  font-family: Outfit, sans-serif;
   line-height: 1;
-  padding: 6px 4px; /* small vertical padding to ensure comfortable click area */
+  padding: 6px 4px;
   display: inline-block;
 }
 
@@ -51,108 +51,45 @@
   color: #aac1e6;
 }
 
+/* Responsive Navbar */
 @media (max-width: 370px) {
   .navbar-links {
-    gap: 15px; /* Reduce gap from 30px to 15px */
+    gap: 15px;
   }
-  
   .navbar-links a {
-    font-size: 0.7rem; /* Smaller font size */
-    padding: 6px 2px; /* Reduce horizontal padding */
+    font-size: 0.7rem;
+    padding: 6px 2px;
   }
 }
 
 @media (max-width: 270px) {
   .navbar-links {
-    gap: 8px; /* Even smaller gap */
+    gap: 8px;
   }
-  
   .navbar-links a {
-    font-size: 0.6rem; /* Even smaller font */
+    font-size: 0.6rem;
     padding: 6px 1px;
   }
 }
 
-.outfit {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-/* form */
-#contact-form {
-  max-width: 600px;
-  margin: 60px auto;
-  padding: 15px;
-  background: #f9f9f9; 
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  font-family: "Outfit", sans-serif;
-  margin-bottom: 10px;
-  margin-top: 15px;
-}
-
-#contact-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.9rem;
-  font-weight: 600;
-  color: #222;
-}
-
-/* Input & textarea */
-.form-control {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: "Outfit", sans-serif;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-}
-
-.form-control:focus {
-  border-color: #aac1e6; /* match navbar hover color */
-  box-shadow: 0 0 0 3px rgba(170, 193, 230, 0.35);
-  outline: none;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #444;
-}
-
-textarea.form-control {
-  resize: none;
-}
-
-.explanation {
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-right: 20px;
-  font-family: "Outfit", sans-serif;
-}
-
-button {
+/* Shared Button Styles */
+button,
+#submit-form,
+.pythagbutton {
   border: none;
-  background-color: #cf3b33;
-  color: white;
-  padding: 12px;
   border-radius: 10px;
-  font-family: "Outfit", sans-serif;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: "Outfit", sans-serif;
 }
 
+/* Converter Button */
 .pythagbutton {
   display: block;
   margin: 20px auto;
-  transition: background 0.3s ease, transform 0.2s ease;
+  background-color: #cf3b33;
+  color: white;
+  padding: 12px;
 }
 
 .pythagbutton:hover {
@@ -164,59 +101,16 @@ button {
   transform: translateY(0);
 }
 
-.input-container {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-}
-
-.input-group {
-  margin-bottom: 15px;
-}
-
-.input-group label {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500px;
-  font-family: "Outfit", sans-serif;
-  width: 80px;
-  margin-bottom: 5px;
-}
-
-input[type='number'] {
-  width: 200px;
-  padding: 8px 12px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-family: "Outfit", sans-serif;
-  transition: border-color 0.3s ease;
-}
-
-input[type='number'],
-select:focus,
-textarea:focus {
-  font-size: 16px;
-}
-
-.result {
-  margin-top: 20px;
-  font-family: "Outfit", sans-serif;
-}
-
-/* Submit button */
+/* Submit Button */
 #submit-form {
   display: block;
   width: 100%;
   padding: 10px;
   margin-top: 10px;
   font-size: 1rem;
-  border: none;
-  border-radius: 12px;
-  background: #000; 
+  background: #000;
   color: white;
   font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #submit-form:hover {
@@ -225,5 +119,137 @@ textarea:focus {
 }
 
 #submit-form:active {
+  transform: translateY(0);
+}
+
+/* Form Container */
+#contact-form {
+  max-width: 600px;
+  margin: 15px auto 10px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Form Title */
+#contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Input, Textarea & Select */
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+/* Shared Focus Styles */
+input[type='number']:focus,
+select:focus,
+textarea:focus,
+.form-control:focus {
+  border-color: #aac1e6;
+  box-shadow: 0 0 0 3px rgba(170, 193, 230, 0.35);
+  outline: none;
+  font-size: 16px;
+}
+
+/* Labels */
+.form-label,
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Explanation Text */
+.explanation {
+  margin: 20px;
+}
+
+/* Input Container for Converters */
+.input-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 16px;
+  width: 80px;
+}
+
+/* Number Inputs */
+input[type='number'] {
+  width: 200px;
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Result Text */
+.result {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.conversion,
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Consistent width for select and input elements */
+.unit-select,
+.unit-input {
+  width: 160px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+}
+
+.unit-input[disabled] {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.to-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.convert-button:active {
   transform: translateY(0);
 }

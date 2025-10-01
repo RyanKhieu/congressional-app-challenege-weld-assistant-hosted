@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weld Assist</title>
+    <title>Reference Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,37 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <div class="container">
+        <h1>Millimeters ↔ Inches Converter</h1>
+        
+        <div class="conversion">
+            <select id="fromUnit" class = "unit-select">
+                <option value="mm">Millimeters</option>
+                <option value="inch">Inches</option>
+            </select>
+            <span class="to-label">to</span>
+            <select id="toUnit" class = "unit-select">
+                <option value="mm">Millimeters</option>
+                <option value="inch">Inches</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="inputValue" placeholder="Enter a number">
+            <input type="number" id="outputValue" placeholder="Converted value" disabled>
+            
+        </div>
+
+        <div class="pythagbutton">
+            <button class = "convert-button" onclick="convert()">Convert</button>
+        </div>
+
+        <div class="result">
+            <h3>Result:</h3>
+            <p id="outputValue"></p>
+        </div>
+    </div>
     
 </body>
 </html>
