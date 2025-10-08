@@ -263,3 +263,17 @@ input[type='number'] {
 .convert-button:active {
   transform: translateY(0);
 }
+
+/* Hide number input steppers/spinners */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
