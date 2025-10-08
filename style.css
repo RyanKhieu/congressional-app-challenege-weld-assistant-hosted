@@ -90,6 +90,7 @@ button,
   background-color: #cf3b33;
   color: white;
   padding: 12px;
+  font-size: 14px;
 }
 
 .pythagbutton:hover {
@@ -165,6 +166,10 @@ textarea:focus,
   box-shadow: 0 0 0 3px rgba(170, 193, 230, 0.35);
   outline: none;
   font-size: 16px;
+  /* Safari-specific fixes to prevent resizing on focus */
+  -webkit-appearance: none;
+  appearance: none;
+  transform: translateZ(0);
 }
 
 /* Labels */
@@ -201,10 +206,15 @@ textarea:focus,
 
 /* Number Inputs */
 input[type='number'] {
-  width: 200px;
+  width: 150px;
   padding: 8px 12px;
   border: 2px solid #ddd;
   border-radius: 8px;
+  /* Safari-specific fixes to prevent resizing on focus */
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  transform: translateZ(0);
 }
 
 /* Result Text */
