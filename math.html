@@ -22,33 +22,38 @@
     </nav>
 
     <div class="container">
-        <h1>Millimeters ↔ Inches Converter</h1>
+        <div class="explanation">
+            <h1>Conversion</h1>
+            <p>This tool allows you to convert millimeters, centimenters, meters, inches, feet, and yards.</p>
+        </div>
         
-        <div class="conversion">
-            <select id="fromUnit" class = "unit-select">
-                <option value="mm">Millimeters</option>
-                <option value="inch">Inches</option>
-            </select>
-            <span class="to-label">to</span>
-            <select id="toUnit" class = "unit-select">
-                <option value="mm">Millimeters</option>
-                <option value="inch">Inches</option>
-            </select>
-        </div>
+        <div class="input-container">
+            <div class="conversion">
+                <select id="fromUnit" class = "unit-select">
+                    <option value="mm">Millimeters</option>
+                    <option value="inch">Inches</option>
+                </select>
+                <span class="to-label">to</span>
+                <select id="toUnit" class = "unit-select">
+                    <option value="mm">Millimeters</option>
+                    <option value="inch">Inches</option>
+                </select>
+            </div>
 
-        <div class="input-group">
-            <input type="number" id="inputValue" placeholder="Enter a number">
-            <input type="number" id="outputValue" placeholder="Converted value" disabled>
-            
-        </div>
+            <div class="input-group">
+                <input type="number" id="inputValue" placeholder="Enter a number">
+                <input type="number" id="outputValue" placeholder="Converted value" disabled>
+                
+            </div>
 
-        <div>
-            <button class = "pythagbutton" onclick="convert()">Convert</button>
-        </div>
+            <div>
+                <button class = "pythagbutton" onclick="convert()">Convert</button>
+            </div>
 
-        <div class="result">
-            <h3>Result:</h3>
-            <p id="outputValue"></p>
+            <div class="result">
+                <h2>Result:</h2>
+                <p id="outputValue"></p>
+            </div>
         </div>
     </div>
     
