@@ -238,7 +238,7 @@ input[type='number'] {
 .unit-input {
   width: 160px;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 16px; /* iOS Safari fix: prevent zoom */
   border-radius: 8px;
   border: 1px solid #ccc;
   font-family: "Outfit", sans-serif;
@@ -255,8 +255,14 @@ input[type='number'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  pointer-events: auto;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  z-index: 999; /* Higher z-index for iOS Safari */
+  position: relative;
+  -webkit-tap-highlight-color: transparent; /* Remove iOS tap highlight */
+  padding-right: 32px;
+  touch-action: manipulation;
 }
 
 .unit-select:hover {

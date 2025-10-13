@@ -5,3 +5,24 @@ function pythag() {
     const output = document.getElementById('pythagresult');
     output.textContent = c;
 }
+
+function angles() {
+    var sideA = parseFloat(document.getElementById('sideA').value);
+    var sideB = parseFloat(document.getElementById('sideB').value);
+    
+    // Calculate angles in radians
+    var angleA = Math.atan(sideB / sideA);
+    var angleB = Math.atan(sideA / sideB);
+
+    // Convert radians to degrees
+    angleA = angleA * (180 / Math.PI);
+    angleB = angleB * (180 / Math.PI);
+
+    // Round to two decimal places
+    angleA = Math.round((angleA + Number.EPSILON) * 10) / 10;
+    angleB = Math.round((angleB + Number.EPSILON) * 10) / 10;
+    
+    // Display results
+    document.getElementById('angleAResult').textContent = angleA + "°";
+    document.getElementById('angleBResult').textContent = angleB + "°";
+}

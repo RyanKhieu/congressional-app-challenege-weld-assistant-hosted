@@ -20,50 +20,50 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <main>
+        <div class="container">
+            <div class="explanation">
+                <h1>Conversion</h1>
+                <p>This tool allows you to convert millimeters, centimenters, meters, inches, feet, and yards.</p>
+            </div>
+            
+            <div class="input-container">
+                <div class="conversion">
+                    <select id="fromUnit" class = "unit-select">
+                        <option value="mm">Millimeters</option>
+                        <option value="cm">Centimeters</option>
+                        <option value="m">Meters</option>
+                        <option value="inch">Inches</option>
+                        <option value="ft">Feet</option>
+                        <option value="yd">Yards</option>
+                    </select>
+                    <span class="to-label">to</span>
+                    <select id="toUnit" class = "unit-select">
+                        <option value="mm">Millimeters</option>
+                        <option value="cm">Centimeters</option>
+                        <option value="m">Meters</option>
+                        <option value="inch">Inches</option>
+                        <option value="ft">Feet</option>
+                        <option value="yd">Yards</option>
+                    </select>
+                </div>
 
-    <div class="container">
-        <div class="explanation">
-            <h1>Conversion</h1>
-            <p>This tool allows you to convert millimeters, centimenters, meters, inches, feet, and yards.</p>
+                <div class="input-group">
+                    <input type="number" id="inputValue" placeholder="Enter a number">
+                    <input type="number" id="outputValue" placeholder="Converted value" disabled>
+                    
+                </div>
+
+                <div>
+                    <button class = "pythagbutton" onclick="convert()">Convert</button>
+                </div>
+
+                <div class="result">
+                    <h2>Result:</h2>
+                    <p id="outputValue"></p>
+                </div>
+            </div>
         </div>
-        
-        <div class="input-container">
-            <div class="conversion">
-                <select id="fromUnit" class = "unit-select">
-                    <option value="mm">Millimeters</option>
-                    <option value="cm">Centimeters</option>
-                    <option value="m">Meters</option>
-                    <option value="inch">Inches</option>
-                    <option value="ft">Feet</option>
-                    <option value="yd">Yards</option>
-                </select>
-                <span class="to-label">to</span>
-                <select id="toUnit" class = "unit-select">
-                    <option value="mm">Millimeters</option>
-                    <option value="cm">Centimeters</option>
-                    <option value="m">Meters</option>
-                    <option value="inch">Inches</option>
-                    <option value="ft">Feet</option>
-                    <option value="yd">Yards</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <input type="number" id="inputValue" placeholder="Enter a number">
-                <input type="number" id="outputValue" placeholder="Converted value" disabled>
-                
-            </div>
-
-            <div>
-                <button class = "pythagbutton" onclick="convert()">Convert</button>
-            </div>
-
-            <div class="result">
-                <h2>Result:</h2>
-                <p id="outputValue"></p>
-            </div>
-        </div>
-    </div>
-    
+    </main>
 </body>
 </html>

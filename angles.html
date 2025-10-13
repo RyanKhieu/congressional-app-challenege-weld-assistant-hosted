@@ -17,5 +17,32 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <main>
+        <div class="explanation">
+            <h1>Angle Finder</h1>
+            <p>Enter the side lengths of the triangle to find the angles.</p>
+        </div>
+
+        <div class="input-container">
+            <div class="input-group">
+                <label for="sideA">Side A:</label>
+                <input type="number" required name="sideA" id="sideA" min="0" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="sideB">Side B:</label>
+                <input type="number" required name="sideB" id="sideB" min="0" step="0.01">
+            </div>
+            <button class="pythagbutton" onclick="angles()">Calculate</button>
+            <div class="result">
+                <h2>Angle A:</h2>
+                <h2 id="angleAResult"></h2>
+                <h2>Angle B:</h2>
+                <h2 id="angleBResult"></h2>
+                <h2>Angle C (Right Angle):</h2>
+                <h2>90°</h2>
+            </div>
+            <img src="assets/anglesexample.svg" alt="Example of triangle with angles labeled" height="250" width="250"></img>
+        </div>
+    </main>
 </body>
 </html>
