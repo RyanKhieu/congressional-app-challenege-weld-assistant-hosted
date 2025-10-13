@@ -322,3 +322,8 @@ input[type=number] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
+.exampleimage {
+  display: block;
+  margin: 20px auto 0;
+}
