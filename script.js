@@ -19,8 +19,6 @@ function convertUnits() {
     const dropdown = document.getElementById('fromUnit');
     var fromValue = dropdown.value;
 
-    document.getElementById('fromUnit').textContent = convertedValue;
-    
     const toDropdown = document.getElementById('toUnit');
     var toValue = toDropdown.value;
 
