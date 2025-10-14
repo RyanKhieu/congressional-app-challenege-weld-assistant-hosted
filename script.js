@@ -10,24 +10,24 @@ const toM = {
     mm: 0.001,
     cm: 0.01,
     m: 1, 
-    in: 0.254,
-    ft: 0.3058,
+    in: 0.0254,
+    ft: 0.3048,
     yd: 0.9144
 };
 
 function convertUnits() {
-    const input = parseFloat(document.getElementById('inputValue').value);
-    const before = document.getElementById('fromUnit').value;
-    const after = document.getElementById('toUnit').value;
-    const result = document.getElementById('result');
+    const dropdown = document.getElementById('fromUnit');
+    var fromValue = dropdown.value;
 
-
-    if (isNaN(input)) {
-        result.innerText('invalid')
-    }
-    //normalization
-    let convertedVal; 
+    document.getElementById('fromUnit').textContent = convertedValue;
     
+    const toDropdown = document.getElementById('toUnit');
+    var toValue = toDropdown.value;
+
+    var ValInMeters = parseFloat(document.getElementById('inputValue').value) * toM[fromValue];
+    var convertedValue = ValInMeters / toM[toValue];
+
+    document.getElementById('outputValue').textContent = convertedValue;
 }
 
 function angles() {
