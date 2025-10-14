@@ -6,6 +6,30 @@ function pythag() {
     output.textContent = c;
 }
 
+const toM = {
+    mm: 0.001,
+    cm: 0.01,
+    m: 1, 
+    in: 0.254,
+    ft: 0.3058,
+    yd: 0.9144
+};
+
+function convertUnits() {
+    const input = parseFloat(document.getElementById('inputValue').value);
+    const before = document.getElementById('fromUnit').value;
+    const after = document.getElementById('toUnit').value;
+    const result = document.getElementById('result');
+
+
+    if (isNaN(input)) {
+        result.innerText('invalid')
+    }
+    //normalization
+    let convertedVal; 
+    
+}
+
 function angles() {
     var sideA = parseFloat(document.getElementById('sideA').value);
     var sideB = parseFloat(document.getElementById('sideB').value);
