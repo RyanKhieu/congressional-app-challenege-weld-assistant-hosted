@@ -18,35 +18,35 @@
         </ul>
     </nav>
     
-    <form id="contact-form" action="mail.php" method="POST"> <!--change eventually-->
+    <form id="contact-form" onsubmit="event.preventDefault(); submitContactForm();">
   <h2>Contact us</h2>
 
   <!-- Name input -->
   <div data-mdb-input-init class="form-outline mb-4">
       <label class="form-label" for="name">Name</label>
-      <input type="text" id="name" name="name" class="form-control" />
+      <input type="text" id="name" name="name" class="form-control" required />
   </div>
 
   <!-- Email input -->
   <div data-mdb-input-init class="form-outline mb-4">
       <label class="form-label" for="email">Email address</label>
-      <input type="email" id="email" name="email" class="form-control" />
+      <input type="email" id="email" name="email" class="form-control" required />
   </div>
 
   <!-- Subject input -->
   <div data-mdb-input-init class="form-outline mb-4">
       <label class="form-label" for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" class="form-control" />
+      <input type="text" id="subject" name="subject" class="form-control" required />
   </div>
 
   <!-- Message input -->
   <div data-mdb-input-init class="form-outline mb-4">
       <label class="form-label" for="message">Message</label>
-      <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+      <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
   </div>
 
-  <!-- Submit button TEMPORARY SOLUTION, SHOULD TAKE INPUT--> 
-  <button data-mdb-button-init id="submit-form" type="button" data-mdb-ripple-init class="btn btn-primary btn-block mb-4" onclick="window.location.href='index.html'">
+  <!-- Submit button --> 
+  <button data-mdb-button-init id="submit-form" type="submit" data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
   Send
   </button>
 </form>
