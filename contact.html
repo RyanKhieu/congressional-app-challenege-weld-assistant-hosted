@@ -18,37 +18,40 @@
         </ul>
     </nav>
     
-    <form id="contact-form" onsubmit="event.preventDefault(); submitContactForm();">
-  <h2>Contact us</h2>
+<form class="contact-form"
+    action="https://formspree.io/f/meorwbjr"
+    method="POST"
+>
+    <h2>Contact us</h2>
 
-  <!-- Name input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-      <label class="form-label" for="name">Name</label>
-      <input type="text" id="name" name="name" class="form-control" required />
-  </div>
+    <!-- Name input -->
+    <div>
+        <label class="form-label" for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control" required />
+    </div>
 
-  <!-- Email input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-      <label class="form-label" for="email">Email address</label>
-      <input type="email" id="email" name="email" class="form-control" required />
-  </div>
+    <!-- Email input -->
+    <div>
+        <label class="form-label" for="email">Email address</label>
+        <input type="email" id="email" name="email" class="form-control" required />
+    </div>
 
-  <!-- Subject input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-      <label class="form-label" for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" class="form-control" required />
-  </div>
+    <!-- Subject input -->
+    <div>
+        <label class="form-label" for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" class="form-control" required />
+    </div>
 
-  <!-- Message input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-      <label class="form-label" for="message">Message</label>
-      <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-  </div>
+    <!-- Message input -->
+    <div>
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+    </div>
 
-  <!-- Submit button --> 
-  <button data-mdb-button-init id="submit-form" type="submit" data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
-  Send
-  </button>
+    <!-- Submit button --> 
+    <button class="submit-form" type="submit">
+    Send
+    </button>
 </form>
 </body>
 </html>

@@ -103,7 +103,7 @@ button,
 }
 
 /* Submit Button */
-#submit-form {
+.submit-form {
   display: block;
   width: 100%;
   padding: 10px;
@@ -114,17 +114,17 @@ button,
   font-weight: 500;
 }
 
-#submit-form:hover {
+.submit-form:hover {
   background: #222;
   transform: translateY(-2px);
 }
 
-#submit-form:active {
+.submit-form:active {
   transform: translateY(0);
 }
 
 /* Form Container */
-#contact-form {
+.contact-form {
   max-width: 600px;
   margin: 15px auto 10px;
   padding: 15px;
@@ -134,7 +134,7 @@ button,
 }
 
 /* Form Title */
-#contact-form h2 {
+.contact-form h2 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.9rem;
