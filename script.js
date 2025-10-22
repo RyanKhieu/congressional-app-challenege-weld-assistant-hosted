@@ -22,11 +22,9 @@ function convertUnits() {
     const toDropdown = document.getElementById('toUnit');
     var toValue = toDropdown.value;
 
-    const inputElement = document.getElementById('inputValue');
-    var input = parseFloat(inputElement.value);
-    
-    if(inputElement.value === '' || isNaN(input)) {
-        document.getElementById('outputValue').textContent = "Please enter a valid number";
+    var input = parseFloat(document.getElementById('inputValue').value);
+    if(isNaN(input)) {
+        document.getElementById('outputValue').textContent = "Invalid input";
         return;
     }
 
@@ -48,7 +46,7 @@ function angles() {
     angleA = angleA * (180 / Math.PI);
     angleB = angleB * (180 / Math.PI);
 
-    // Round to one decimal place
+    // Round to two decimal places
     angleA = Math.round((angleA + Number.EPSILON) * 10) / 10;
     angleB = Math.round((angleB + Number.EPSILON) * 10) / 10;
     
