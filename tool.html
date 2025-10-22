@@ -19,11 +19,11 @@
             <li><a href="tool.html">Tools</a></li>
         </ul>
     </nav>
-<section>
+<section class="chart">
   <h2>Metal Thickness Gauge Chart</h2>
 
   <label for="materialSelect">Select Material:</label>
-  <select id="materialSelect" onchange="updateTable()">
+  <select id="materialSelect" onchange="updateTable()" class="unit-select">
     <option value="steel" selected>Steel</option>
     <option value="stainless">Stainless Steel</option>
     <option value="galvanized">Galvanized Steel</option>
@@ -41,6 +41,6 @@
     <tbody id="tableBody"></tbody>
   </table>
 </section> 
-<p style="text-align: right; margin-top: 7px;">Values are approximate due to rounding</p>
+<p style="text-align: right; margin-top: 7px;" class="disclaimer">Values are approximate due to rounding</p>
 </body>
 </html>
