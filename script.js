@@ -55,56 +55,6 @@ function angles() {
     document.getElementById('angleBResult').textContent = angleB + "°";
 }
 
-function submitContactForm() {
-    // Get form values
-    var name = document.getElementById('name').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var subject = document.getElementById('subject').value.trim();
-    var message = document.getElementById('message').value.trim();
-
-    // Validate form fields
-    if (!name) {
-        alert('Please enter your name.');
-        return;
-    }
-
-    if (!email) {
-        alert('Please enter your email address.');
-        return;
-    }
-
-    // Basic email validation
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
-
-    if (!subject) {
-        alert('Please enter a subject.');
-        return;
-    }
-
-    if (!message) {
-        alert('Please enter a message.');
-        return;
-    }
-
-    // If all validations pass, show success message
-    alert('Thank you for your message, ' + name + '! We will get back to you soon at ' + email + '.');
-
-    // Log form data to console (for testing purposes)
-    console.log('Form submitted:', { name, email, subject, message });
-
-    // Clear the form
-    document.getElementById('contact-form').reset();
-
-    // Optional: Redirect to home page after a short delay
-    setTimeout(function() {
-        window.location.href = 'index.html';
-    }, 1500);
-}
-
 //tools page 
 const gaugeData = {
   steel: [
