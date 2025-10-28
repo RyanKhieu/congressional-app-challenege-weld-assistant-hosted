@@ -412,6 +412,18 @@ tr:nth-child(even) {
   padding: 20px;
 }
 
+/* Card link wrapper - makes entire card clickable */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-5px);
+}
+
 /* 🔹 Individual card styling */
 .card {
   background: #fff;
@@ -420,6 +432,7 @@ tr:nth-child(even) {
   border-radius: 5px;
   width: 300px;
   margin: 10px;
+  cursor: pointer;
 }
 
 /* Hover effect */
